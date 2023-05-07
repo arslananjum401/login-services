@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors())
-
+const PORT = process.env.PORT || 3030;
 app.use(CookieParser())
 app.use(express.json({ limit: "5mb" }));
 
@@ -96,6 +96,6 @@ const build = path.join(__dirname, "./dist/index.html")
 app.get("*", (req, res) => {
     res.sendFile(build);
 });
-app.listen(4000, () => {
-    console.log('listening on port :' + 4000)
+app.listen(PORT, () => {
+    console.log('listening on port :' + PORT)
 })
