@@ -3,7 +3,7 @@ import JWT from 'jsonwebtoken';
 import "./db/conn.js";
 import cors from "cors"
 import { getGoogleOAuthToken, getGoogleUser } from './Service/GoogleServices.js';
-import { User } from './db/shema.js';
+import { User } from './db/schema.js';
 import axios from 'axios';
 import CookieParser from 'cookie-parser';
 import path from 'path';
