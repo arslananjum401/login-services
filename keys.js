@@ -6,6 +6,6 @@ export const keys =
         "token_uri": "https://oauth2.googleapis.com/token",
         "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
         "client_secret": "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",
-        "redirect_uris": ["http://localhost:4000/api/session/oauth/google"]
+        "redirect_uris": ["https://login-services-production.up.railway.app/api/session/oauth/google"]
     }
 }

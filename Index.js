@@ -49,7 +49,7 @@ app.get('/api/session/oauth/google', async function (req, res) {
             httpOnly: true,
             maxAge: Date.now() + 1000 * 60 * 60 * 24
         })
-            .redirect(`http://localhost:5173/redirect/google?userInfo=${JSON.stringify(userData)}`)
+            .redirect(`https://login-services-production.up.railway.app/redirect/google?userInfo=${JSON.stringify(userData)}`)
     } catch (error) {
         console.log(`error occurred while authenticating google login: ${error}`)
     }
