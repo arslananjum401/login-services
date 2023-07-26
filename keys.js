@@ -1,11 +1,11 @@
-export const keys =
+const keys =
 {
     "web": {
-        "client_id": "387562625708-t89d7bld486ua2jr77ibbmdmnh49b5b7.apps.googleusercontent.com",
-        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-        "token_uri": "https://oauth2.googleapis.com/token",
-        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_secret": "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",
-        "redirect_uris": ["https://login-services-production.up.railway.app/api/session/oauth/google"]
+        "client_id": process.env.GOOGLE_CLIENT_ID,
+        "auth_uri": process.env.GOOGLE_AUTH_URI,
+        "token_uri": process.env.GOOGLE_TOKEN_URI,
+        "auth_provider_x509_cert_url": process.env.GOOGLE_AUTH_PROVIDER_X509_CERT_URL,
+        "client_secret": process.env.GOOGLE_CLIENT_SECRET,
+        "redirect_uris": JSON.parse(process.env.GOOGLE_REDIRECT_URIS)[0]
     }
 }

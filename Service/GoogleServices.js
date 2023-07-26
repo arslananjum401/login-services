@@ -1,14 +1,12 @@
 import axios from "axios";
-import { keys } from "../keys.js";
-
 export async function getGoogleOAuthToken(code) {
     const Url = `https://oauth2.googleapis.com/token`;
-    
+
     const values = {
         code,
-        client_id: keys.web.client_id,
-        client_secret: keys.web.client_secret,
-        redirect_uri: keys.web.redirect_uris[0],
+        client_id: process.env.GOOGLE_CLIENT_ID,
+        client_secret:process.env.GOOGLE_CLIENT_SECRET,
+        redirect_uri: JSON.parse(process.env.GOOGLE_REDIRECT_URIS)[0],
         grant_type: "authorization_code",
     };
     try {
